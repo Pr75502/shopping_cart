@@ -1,12 +1,46 @@
-# React + Vite
+# 🛒 React Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, scalable shopping cart application built using **React**, **Context API**, and **useReducer** for global state management. Cart data is persisted with `localStorage`, and the UI is styled using **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Core Concepts & React Hooks
 
-## Expanding the ESLint configuration
+This project focuses on managing global state using the **Context API** and `useReducer` pattern — a great alternative to Redux for smaller to medium apps.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Hook / API         | Usage Description |
+|--------------------|-------------------|
+| `createContext`    | Creates a global cart context to share state between components |
+| `useReducer`       | Handles cart actions (add, remove, update) with a reducer pattern |
+| `useContext`       | Accesses cart state and dispatch globally |
+| `useEffect`        | Syncs cart state with `localStorage` on every update |
+| `useState`         | (If used in other parts) Handles component-level state |
+
+---
+
+## ✨ Features
+
+- 🛍️ Add items to the cart
+- ❌ Remove items from cart
+- 🔁 Persistent cart with `localStorage`
+- 🧠 Custom `CartContext` + `CartReducer` setup
+- ⚡ Fast and responsive UI using Tailwind CSS
+- 🧩 Modular file structure
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology     | Purpose                            |
+|----------------|------------------------------------|
+| **React**      | UI Library                         |
+| **Context API**| Global state management            |
+| **useReducer** | Custom reducer logic               |
+| **localStorage**| Persist cart data across refresh  |
+| **Tailwind CSS**| Fast styling                      |
+| **JavaScript** | App logic and hooks                |
+
+---
+
+## 📁 Project Structure
+
