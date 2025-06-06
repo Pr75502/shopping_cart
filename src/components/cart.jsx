@@ -20,11 +20,11 @@ const CartItems = () => {
             
             <Link to="/">
                 <button
-                    className="border border-black rounded-lg p-2 bg-yellow-500 "
+                        className="border border-black rounded-lg p-2 bg-yellow-400 hover:bg-yellow-600 "
                     >Back to Product</button></Link>
             
             <button
-                className="border border-black rounded-lg p-2 bg-red-500 "
+                    className="border border-black rounded-lg p-2 bg-red-400 hover:bg-red-600  "
             onClick={()=>{dispatch({type:CLEAR_CART,payload:[]})}}
                 >Clear Cart</button>
             </div>
@@ -40,12 +40,16 @@ const CartItems = () => {
                                 className="h-48 w-48  border border-black rounded-lg p-2"
                                 src={item.image} />
                         <div >
-                        <h3>{item.title}</h3>
-                        <h4>Price:{item.price}</h4>
+                        <h3
+                        className="m-2"
+                            >{item.title}</h3>
+                            <h4 className="m-2">Price:{item.price}</h4>
                         <button
-                            className="border border-black rounded-lg p-2 bg-yellow-500  "
-                                onClick={() => dispatch({ type: REMOVE_FROM_CART, payload: item })}>Remove</button>
-                            </div>
+                            className="border border-black rounded-lg p-2 bg-yellow-400 m-2 hover:bg-yellow-600"
+                                onClick={() => dispatch({ type: REMOVE_FROM_CART, payload: item.id })}>Remove</button>
+                            <p className="m-2">Quantity:</p>
+                        </div>
+                        
                         </div>
                   
                 )

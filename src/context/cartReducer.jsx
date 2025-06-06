@@ -17,6 +17,7 @@ const CartReducer = (state,action) => {
             cart: state.cart.filter((item) => item.id !== action.payload)
         }
     } else if (action.type == CLEAR_CART) {
+        localStorage.removeItem("cart") // to clear cart from lo
         return {
             ...state,
             cart: []

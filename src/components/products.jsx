@@ -17,10 +17,8 @@ const ProductList = () => {
         .then((res)=>setProducts(res.data))
        .catch((err)=>console.log(err))
     }, [])
-    // const handleCart = () => {
-    //     <link
-    // }
-
+    
+    
    
 
     return (
@@ -30,7 +28,7 @@ const ProductList = () => {
                 className="text-4xl font-bold text-center"
                 >PRODUCTS</p>
                 <Link to="/cart"><button
-                    className="border border-black rounded-lg p-2  bg-yellow-500 w-20"
+                    className="border border-black rounded-lg p-2  bg-yellow-500 w-20 hover:bg-yellow-300"
                 >Cart</button></Link>
             </div>
 
